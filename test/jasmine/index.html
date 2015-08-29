@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.3.4</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.3.4/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.3.4/jasmine.css">
+
+  <script src="lib/jasmine-2.3.4/jasmine.js"></script>
+  <script src="lib/jasmine-2.3.4/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.3.4/console.js"></script>
+  <!-- These are the Jasmine Reporters. -->
+  <!-- They must be placed before the boot file. -->
+  <script type="text/javascript" src="lib/junit_reporter.js"></script>
+  <script type="text/javascript" src="lib/terminal_reporter.js"></script>
+  <script src="lib/jasmine-2.3.4/boot.js"></script>
+  <!-- The following lines allow this to be reported to Gulp. -->
+  <!-- The Jasmine 2 JUnit boot.js is needed to add functionality -->
+  <!-- the Jasmine 2 boot.js -->
+  <script src="lib/jasmine2-junit.js"></script>
+  <script src="lib/boot.js"></script>
+
+  <!-- include source files here... -->
+<!-- JS Libs -->
+<script src="../../web/lib/angular.js"></script>
+<script src="../../web/lib/jquery.js"></script>
+<script src="../../web/lib/bootstrap.js"></script>
+<script src="lib/angular-mocks.js"></script>
+<script src="../../web/lib/angular-animate.js"></script>
+<script src="../../web/lib/angular-busy.js"></script>
+<script src="../../web/lib/angular-route.js"></script>
+<script src="../../web/lib/angular-messages.js"></script>
+<script src="../../web/lib/angular-sanitize.js"></script>
+<script src="../../web/lib/moment.js"></script>
+<script src="../../web/lib/ui-bootstrap-tpls-0.13.0.js"></script>
+<script src="../../web/lib/toaster.js"></script>
+<!-- UI-Grid -->
+<script src="../../web/lib/ui-grid.js"></script>
+<script src="../../web/lib/pdfmake.js"></script>
+<script src="../../web/lib/vfs_fonts.js"></script>
+
+<!-- Timecard Review -->
+<script src="../../web/controllers/timecardReview.js"></script>
+<!-- This will be used for an "existence" test -->
+<script src="../../web/services/httpFactory.js"></script>
+<!-- This will be used for dependency tests, because there is no connection to backend -->
+<script src="spec/httpMockFactory.js"></script>
+<script src="../../web/services/gridFactory.js"></script>
+<script src="../../web/services/utilService.js"></script>
+<script src="../../web/controllers/directReportsController.js"></script>
+<script src="../../web/controllers/employeeDetailController.js"></script>
+<script src="../../web/controllers/logController.js"></script>
+<script src="../../web/controllers/faqController.js"></script>
+
+
+  <!-- include spec files here... -->
+  <script type="text/javascript">
+        jasmine.getEnv().addReporter(new jasmineReporters.TerminalReporter({
+            verbosity: 3,
+            color: true,
+            showStack: true
+        }));
+  </script>
+  <script src="spec/httpFactoryTest.js"></script>
+  <script src="spec/directReportsControllerTest.js"></script>
+  <script src="spec/employeeDetailControllerTest.js"></script>
+
+</head>
+
+<body>
+</body>
+</html>

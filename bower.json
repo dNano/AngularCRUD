@@ -1,0 +1,32 @@
+{
+   "name": "AngularCRUD",
+   "version": "1.0.0",
+   "description": "A sample Angular CRUD application",
+   "authors": [
+      "jshea <James.T.Shea@jpl.nasa.gov>"
+   ],
+   "main": "path/to/main.css",
+   "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "test",
+      "tests"
+   ],
+   "dependencies": {
+     "angular": "latest",
+     "angular-animate": "latest",
+     "angular-messages": "latest",
+     "angular-route": "latest",
+     "angular-sanitize": "latest",
+     "angular-busy": "latest",
+     "angularjs-toaster": "latest",
+     "angular-ui-grid": "latest",
+     "bootstrap": "latest",
+     "jquery": "latest",
+     "momentjs": "latest",
+     "ui-bootstrap": "latest"
+   },
+   "devDependencies": {
+   }
+}

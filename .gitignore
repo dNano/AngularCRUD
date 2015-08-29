@@ -1,0 +1,5 @@
+nbproject/private/
+build/
+dist/
+bower_components/
+node_modules/

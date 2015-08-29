@@ -1,0 +1,30 @@
+
+<div class="well well-sm">
+   <h3>Settings</h3>
+
+   <!-- This is a responsive form. At small sizes the label will stack above its control. -->
+   <form name="settingsForm" class="form-horizontal" role="form" ng-submit="save()">
+
+      <!-- REST Web Service URL -->
+      <div class="form-group">
+         <label for="url" class="control-label col-md-2">REST Web Service URL:</label>
+
+         <div class="col-md-10">
+            <input type="text" id="url" name="url" ng-model="settings.url" class="form-control col-md-10"
+                   placeholder="http://localhost:7001/" minlength="5" ng-maxlength="60" focus required>
+
+            <!-- https://docs.angularjs.org/api/ngMessages -->
+            <div ng-messages="settingsForm.url.$error" class="text-danger">
+               <div ng-message="required">A URL required! xxx</div>
+               <div ng-message="minlength">URL appears to be too short!</div>
+               <div ng-message="maxlength">URL is too long!</div>
+            </div>
+
+         </div>
+      </div>
+
+      <button class="btn btn-primary" ng-disabled="settingsForm.$invalid">Save</button>
+      <button class="btn" ng-click="cancel()">Cancel</button>
+   </form>
+
+</div>

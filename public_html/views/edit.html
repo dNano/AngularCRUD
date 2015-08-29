@@ -1,0 +1,63 @@
+<div class="alert alert-warning" ng-hide="online">
+    Working Offline. Changes will be saved when an Internet connection is restored.
+</div>
+
+<div class="well well-sm">
+   <h3 ng-show="contact.id">Update Contact</h3>
+   <h3 ng-show="!contact.id">New Contact</h3>
+
+   <!-- This is a responsive form. At small sizes the label will stack above its control. -->
+   <form name="contactForm" class="form-horizontal" role="form" ng-submit="save()">
+
+      <!-- First Name -->
+      <div class="form-group" ng-class="{ 'has-error' : contactForm.firstName.$invalid }">
+         <label for="firstName" class="control-label col-md-2">First Name:</label>
+
+         <div class="col-md-10">
+            <input type="text" id="firstName" name="firstName" ng-model="contact.firstName"
+                   class="form-control col-md-10" placeholder="First name" minlength="2" ng-maxlength="20" focus required>
+
+            <!-- Error messages using angular-messages. Field is required and length between 2 & 20 chars -->
+            <div ng-messages="contactForm.firstName.$error" ng-if="contactForm.firstName.$dirty" class="text-danger">
+               <div ng-message="required">A first name is required!</div>
+               <div ng-message="minlength">First name too short!</div>
+               <div ng-message="maxlength">First name is too long!</div>
+            </div>
+
+         </div>
+      </div>
+
+      <!-- Last Name -->
+      <div class="form-group" ng-class="{ 'has-error' : contactForm.lastName.$invalid }">
+         <label for="lastName" class="control-label col-md-2">Last Name:</label>
+         <div class="col-md-10">
+            <input type="text" id="lastName" name="lastName" ng-model="contact.lastName"
+                   class="form-control col-md-10" placeholder="Last name" minlength="2" ng-maxlength="20" required>
+
+            <!-- Error messages using angular-messages. Field is required and length between 2 & 20 chars -->
+            <div ng-messages="contactForm.lastName.$error" ng-if="contactForm.lastName.$dirty" class="text-danger">
+               <div ng-message="required">A last name is required!</div>
+               <div ng-message="minlength">Last name too short!</div>
+               <div ng-message="maxlength">Last name is too long!</div>
+            </div>
+
+         </div>
+      </div>
+
+      <!-- Buttons -->
+      <div>
+         <span ng-show="contact.id">
+            <button class="btn btn-primary" ng-disabled="contactForm.$invalid">Save</button>
+         </span>
+
+         <!-- Show this button when contact.id is blank. This happens when adding. -->
+         <span ng-hide="contact.id">
+            <button class="btn btn-primary" ng-disabled="contactForm.$invalid">Add</button>
+         </span>
+
+         <!-- Show this button when id is blank. This happens when adding. -->
+         <button class="btn btn-danger" type="button" ng-click="remove()" ng-show="contact.id">Delete</button>
+      </div>
+   </form>
+
+</div>
