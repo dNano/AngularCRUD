@@ -9,7 +9,7 @@
       <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
       <init-param>
          <param-name>javax.ws.rs.Application</param-name>
-         <param-value>gov.nasa.jpl.ebis.person.PersonApplication</param-value>
+         <param-value>com.example.person.PersonApplication</param-value>
       </init-param>
 
       <!-- Use Jackson JSON lib to avoid the single object not passed as an array problem -->

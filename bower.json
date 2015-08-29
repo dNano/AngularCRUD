@@ -3,7 +3,7 @@
    "version": "1.0.0",
    "description": "A sample Angular CRUD application",
    "authors": [
-      "jshea <James.T.Shea@jpl.nasa.gov>"
+      "jshea <jimtshea@github.com>"
    ],
    "main": "path/to/main.css",
    "ignore": [

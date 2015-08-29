@@ -1,4 +1,4 @@
-package gov.nasa.jpl.ebis.person.model;
+package com.example.person.model;
 
 
 import java.io.Serializable;

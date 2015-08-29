@@ -1,7 +1,7 @@
-package gov.nasa.jpl.ebis.person.model;
+package com.example.person.model;
 
-import gov.nasa.jpl.ebis.person.PersonException;
-import gov.nasa.jpl.nbs.util.JPLDBConnection;
+import com.example.person.PersonException;
+import com.example.util.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,7 +36,7 @@ public class PersonDAO {
 		ResultSet rs = null;
 
 		try {
-			conn = JPLDBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			ps = conn.prepareStatement(
 					  "select * " +
 					  "from apps." + yourUserName + "_rest_example " +
@@ -95,7 +95,7 @@ public class PersonDAO {
 		ResultSet rs = null;
 
 		try {
-			conn = JPLDBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			ps = conn.prepareStatement(
 					  "select * " +
 					  "from apps." + yourUserName + "_rest_example " +
@@ -164,7 +164,7 @@ public class PersonDAO {
 		String whereClause = buildWhereClause(searchCriteria);
 
 		try {
-			conn = JPLDBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			ps = conn.prepareStatement(
 					  "select * " +
 					  "from apps." + yourUserName + "_rest_example " +
@@ -230,7 +230,7 @@ public class PersonDAO {
 		Person newUser = null;
 
 		try {
-			conn = JPLDBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			ps = conn.prepareStatement(
 					  "insert into apps." + yourUserName + "_rest_example (" +
 					  "userId, firstName, lastName, " +
@@ -332,7 +332,7 @@ public class PersonDAO {
 		ResultSet rs = null;
 
 		try {
-			conn = JPLDBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			ps = conn.prepareStatement(
 					  "update apps." + yourUserName + "_rest_example set " +
 					  "firstName=?, " +
@@ -413,7 +413,7 @@ public class PersonDAO {
 		PreparedStatement ps = null;
 
 		try {
-			conn = JPLDBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			ps = conn.prepareStatement("delete from apps." + yourUserName + "_rest_example where userId = ?");
 			ps.setLong(1, userId);
 
@@ -459,7 +459,7 @@ public class PersonDAO {
 		PreparedStatement ps = null;
 
 		try {
-			conn = JPLDBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			ps = conn.prepareStatement("delete from apps." + yourUserName + "_rest_example");
 
 			ps.executeUpdate();

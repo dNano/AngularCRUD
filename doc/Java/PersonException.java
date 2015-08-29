@@ -1,4 +1,4 @@
-package gov.nasa.jpl.ebis.person;
+package com.example.person;
 
 /**
  * Custom error for handling Person business errors.

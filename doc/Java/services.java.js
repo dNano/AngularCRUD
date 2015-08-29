@@ -2,6 +2,8 @@
  * Services to interact with our data storage - Server using REST Web Services
  * and local data storage via localForage
  */
+/* global localforage */
+
 angular.module("angularcrud")
    /*
     * Our controllers interact with dataFactory which is a facade for server or local storage. If we have

@@ -1,4 +1,4 @@
-package gov.nasa.jpl.ebis.person;
+package com.example.person;
 
 import java.util.HashSet;
 import java.util.Set;

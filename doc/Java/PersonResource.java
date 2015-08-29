@@ -1,7 +1,7 @@
-package gov.nasa.jpl.ebis.person;
+package com.example.person;
 
-import gov.nasa.jpl.ebis.person.model.Person;
-import gov.nasa.jpl.ebis.person.model.PersonDAO;
+import com.example.person.model.Person;
+import com.example.person.model.PersonDAO;
 import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
